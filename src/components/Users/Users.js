@@ -1,14 +1,13 @@
 import {useEffect, useState} from "react";
 
 import {User} from "../User/User";
+import {usersService} from "../../services/users.service";
 
 const Users = () => {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/users')
-            .then(value => value.json())
-            .then(value => setUsers(value))
+        usersService.getAll().then(value => setUsers(value))
     }, [])
 
     return (

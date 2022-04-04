@@ -1,4 +1,5 @@
-const User = ({user: {name, username, email, address: {street, city}}}) => {
+const User = ({user}) => {
+    const {name, username, email, address: {street, city}} = user;
     return (
         <div>
             <h1>{name} ({username})</h1>
