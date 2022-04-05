@@ -1,11 +1,4 @@
-.users {
-    color: navy;
-}
-
-.posts {
-    color: red;
-}
-
-.comments {
-    color: green;
+*{
+    margin: 0;
+    padding: 0;
 }
