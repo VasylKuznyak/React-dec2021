@@ -1,6 +1,6 @@
 import './Character.css';
 
-const Character = ({person, getId}) => {
+const Character = ({person}) => {
     const {
         name,
         height,
@@ -19,7 +19,7 @@ const Character = ({person, getId}) => {
                 <h4>mass: {mass}</h4>
                 <h5>hair color: {hair_color}, skin color: {skin_color}, eye color: {eye_color}</h5>
                 <h6>birth year: {birth_year}, gender: {gender}</h6>
-                <button onClick={()=>getId(person)}>Details about character</button>
+                <button>Details about character</button>
             </div>
     );
 };

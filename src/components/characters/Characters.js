@@ -11,12 +11,10 @@ const Characters = () => {
         starWarsService.getAll().then(value => setCharacters(value))
     }, [])
 
-
-
     return (
         <div className={'characters'}>
             {
-                characters && (characters.results).map(result=><Character key={result.name} person={result}/>)
+                characters && (characters.results).map(result => <Character key={result.name} person={result}/>)
             }
         </div>
     );
