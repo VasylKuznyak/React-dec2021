@@ -1,6 +1,6 @@
 import css from './UserPost.module.css'
 
-const UserPost = ({onePost: {title, body}}) => {
+const UserPosts = ({posts: {title, body}}) => {
     return (
         <div className={css.userPost}>
             <h1>{title}</h1>
@@ -9,4 +9,4 @@ const UserPost = ({onePost: {title, body}}) => {
     );
 };
 
-export {UserPost};
+export {UserPosts};
