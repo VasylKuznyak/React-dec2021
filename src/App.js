@@ -1,7 +1,7 @@
 import {useState} from "react";
 
 import './App.css';
-import {Posts, Users} from "./components";
+import {UserPost, Users} from "./components";
 import {postService} from "./services/post.service";
 
 const App = () => {
@@ -15,7 +15,7 @@ const App = () => {
     return (
         <div>
             <Users idForPost={idForPost}/>
-            {onePost && <Posts onePost={onePost}/>}
+            {onePost && <UserPost onePost={onePost}/>}
         </div>
     );
 };
