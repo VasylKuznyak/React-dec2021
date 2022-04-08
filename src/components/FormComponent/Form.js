@@ -15,7 +15,7 @@ const Form = ({setIdForm}) => {
 
     return (
         <form>
-            <select onChange={(e) => handleChange(e)}>
+            <select onChange={(event) => handleChange(event)}>
                 {
                     users.map((user) =>
                         <option value={user.id} key={user.id}>{user.name}</option>)
