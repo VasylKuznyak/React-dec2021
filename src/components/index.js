@@ -1,3 +1,2 @@
-export * from './FormComponent/Form';
-export * from './PostComponent/PostComponent';
-export * from './PostsComponent/PostsComponent';
+export * from './Character/Character';
+export * from './Characters/Characters';
