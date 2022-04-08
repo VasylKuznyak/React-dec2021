@@ -1,7 +1,7 @@
-const PostsComponent = () => {
+const PostsComponent = ({post: {id, title}}) => {
     return (
         <div>
-            PostsComponent
+            <p>{id}. {title}</p>
         </div>
     );
 };
