@@ -1,10 +1,19 @@
-import {Characters} from "./components";
+import {useState} from "react";
+
+import {CharacterChosen, Characters} from "./components";
 import style from './App.module.css';
 
+
 const App = () => {
+    const [chosenCharacter, setChosenCharacter] = useState(null);
+
     return (
-        <div className={style.global}>
-            <Characters/>
+        <div>
+            <h1 className={style.title}>RICK AND MORTY CHARACTERS</h1>
+            <div className={style.global}>
+                {chosenCharacter && <CharacterChosen chosenCharacter={chosenCharacter}/>}
+                <Characters setChosenCharacter={setChosenCharacter}/>
+            </div>
         </div>
     );
 };

@@ -1,0 +1,14 @@
+.chosenCharacter {
+    text-align: center;
+    color: darkred;
+    margin: 0;
+}
+
+.chosenCharacter img {
+    border-radius: 50%;
+    margin-top: 30px;
+}
+
+.chosenCharacter h1, h2, h3 {
+    margin: 5px;
+}

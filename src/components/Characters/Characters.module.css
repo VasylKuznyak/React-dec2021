@@ -3,13 +3,5 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-}
-
-.title {
-    margin: 0;
-    padding: 10px;
-    color: darkred;
-    font-size: 50px;
-    font-family: 'Grape Nuts', cursive;
-    text-align: center;
+    padding-bottom: 30px;
 }
