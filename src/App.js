@@ -3,7 +3,6 @@ import {useState} from "react";
 import {CharacterChosen, Characters} from "./components";
 import style from './App.module.css';
 
-
 const App = () => {
     const [chosenCharacter, setChosenCharacter] = useState(null);
 

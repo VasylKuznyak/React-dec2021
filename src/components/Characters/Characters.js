@@ -17,7 +17,7 @@ const Characters = ({setChosenCharacter}) => {
             <div className={style.characters}>
                 {
                     characters.map((character) =>
-                    <Character key={character.id} setChosenCharacter={setChosenCharacter} character={character}/>)
+                        <Character key={character.id} setChosenCharacter={setChosenCharacter} character={character}/>)
                 }
             </div>
         </div>
