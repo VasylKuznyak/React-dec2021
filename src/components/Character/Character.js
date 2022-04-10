@@ -1,15 +1,10 @@
 import style from './Character.module.css';
 
-const Character = ({character, setChosenCharacter}) => {
-    const {image, name, status} = character
+const Character = ({character: {name, imageUrl}}) => {
     return (
-        <div className={style.character} onClick={() => {
-            setChosenCharacter(character);
-            window.scrollTo(0, 0)
-        }}>
-            <h2>{name}</h2>
-            <img src={image} alt={`character-${name}`}/>
-            <h4>status: {status}</h4>
+        <div className={style.character}>
+            <h3>{name}</h3>
+            <img src={imageUrl} alt={name}/>
         </div>
     );
 };

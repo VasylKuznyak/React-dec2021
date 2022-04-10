@@ -1,18 +1,18 @@
-.character {
+.character{
+    border: 3px solid darkmagenta;
+    border-radius: 20%;
+    margin: 15px;
+    background-color: lightgrey;
+}
+
+.character h3 {
+    color: rebeccapurple;
     text-align: center;
-    background-color: #dcdcc6;
-    border: 1px solid saddlebrown;
-    color: darkred;
-    margin: 20px 3px 3px;
-    opacity: 0.7;
 }
 
-.character:hover {
-    transform: scale(.9);
-    border: 3px solid saddlebrown;
-    opacity: 1;
-}
-
-.character h2, h4 {
-    margin: 5px;
+.character img {
+    width: 250px;
+    height: 250px;
+    border-radius: 20%;
+    margin: 10px;
 }

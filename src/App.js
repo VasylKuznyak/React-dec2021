@@ -1,18 +1,14 @@
-import {useState} from "react";
+import {Routes, Route} from 'react-router-dom';
 
-import {CharacterChosen, Characters} from "./components";
-import style from './App.module.css';
+import {HomePage, CharactersPage} from "./pages";
 
 const App = () => {
-    const [chosenCharacter, setChosenCharacter] = useState(null);
-
     return (
         <div>
-            <h1 className={style.title}>RICK AND MORTY CHARACTERS</h1>
-            <div className={style.global}>
-                {chosenCharacter && <CharacterChosen chosenCharacter={chosenCharacter}/>}
-                <Characters setChosenCharacter={setChosenCharacter}/>
-            </div>
+            <Routes>
+                <Route path={'/'} element={<HomePage/>}/>
+                <Route path={'/disney'} element={<CharactersPage/>}/>
+            </Routes>
         </div>
     );
 };

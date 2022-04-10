@@ -1,7 +1,0 @@
-.characters {
-    font-family: 'Grape Nuts', cursive;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    padding-bottom: 30px;
-}
