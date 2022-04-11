@@ -1,6 +1,6 @@
 import {Routes, Route} from 'react-router-dom';
 
-import {HomePage, CharactersPage} from "./pages";
+import {HomePage, CharactersPage, DigimonsPage} from "./pages";
 
 const App = () => {
     return (
@@ -8,6 +8,7 @@ const App = () => {
             <Routes>
                 <Route path={'/'} element={<HomePage/>}/>
                 <Route path={'/disney'} element={<CharactersPage/>}/>
+                <Route path={'/digimon'} element={<DigimonsPage/>}/>
             </Routes>
         </div>
     );
