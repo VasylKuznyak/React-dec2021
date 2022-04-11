@@ -1,15 +1,14 @@
-import {Routes, Route} from 'react-router-dom';
+import {useState} from "react";
 
-import {HomePage, CharactersPage, DigimonsPage} from "./pages";
+import {CarsComponent, FormComponent} from "./components";
 
 const App = () => {
+    const [newCar, setNewCar] = useState([]);
+
     return (
         <div>
-            <Routes>
-                <Route path={'/'} element={<HomePage/>}/>
-                <Route path={'/disney'} element={<CharactersPage/>}/>
-                <Route path={'/digimon'} element={<DigimonsPage/>}/>
-            </Routes>
+            <FormComponent setNewCar={setNewCar}/>
+            <CarsComponent newCar={newCar}/>
         </div>
     );
 };

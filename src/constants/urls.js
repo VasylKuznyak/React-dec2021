@@ -1,7 +1,7 @@
 const baseURL = process.env.REACT_APP_API;
 
-export const urls = {
-    characters: '/characters',
+export const urls={
+    cars: '/cars',
 }
 
 export default baseURL;

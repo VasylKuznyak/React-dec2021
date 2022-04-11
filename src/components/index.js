@@ -1,2 +1,3 @@
-export * from './Character/Character';
-export * from './Digimon/Digimon';
+export * from './CarComponent/CarComponent';
+export * from './CarsComponent/CarsComponent';
+export * from './FormComponent/FormComponent';
