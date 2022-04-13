@@ -26,6 +26,9 @@ const FormComponent = ({setCreatedCar, updatedCar}) => {
     }, [setValue, updatedCar])
 
     const OnSubmit = async (car) => {
+        if (updatedCar) {
+            await carsService.updadeById(updatedCar.id, updatedCar);
+        }
         try {
             const {data} = await carsService.postCar(car);
             setCreatedCar(data);
@@ -55,7 +58,7 @@ const FormComponent = ({setCreatedCar, updatedCar}) => {
             {formError.year && <span>{formError.year[0]}</span>}
             {errors.year && <span>{errors.year.message}</span>}
 
-            <button>Send</button>
+            {updatedCar ? <button>Update</button> : <button>Send</button>}
         </form>
     );
 }
