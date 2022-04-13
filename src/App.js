@@ -1,14 +1,14 @@
-import {useState} from "react";
+import React, {useState} from 'react';
 
 import {CarsComponent, FormComponent} from "./components";
 
 const App = () => {
-    const [newCar, setNewCar] = useState([]);
+    const [createdCar, setCreatedCar] = useState(null);
 
     return (
         <div>
-            <FormComponent setNewCar={setNewCar}/>
-            <CarsComponent newCar={newCar}/>
+            <FormComponent setCreatedCar={setCreatedCar}/>
+            <CarsComponent createdCar={createdCar}/>
         </div>
     );
 };
