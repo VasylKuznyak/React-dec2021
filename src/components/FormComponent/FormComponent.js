@@ -3,10 +3,10 @@ import {useEffect, useState} from "react";
 import {joiResolver} from "@hookform/resolvers/joi";
 
 import {carsService} from "../../services";
-import {carValidator} from "../validators";
+import {carValidator} from "../../validators";
 import style from './Form.module.css';
 
-const FormComponent = ({setCreatedCar, updatedCar}) => {
+const FormComponent = ({setCreatedCar, updatedCar, setCarAfterUpdate}) => {
     const [formError, setFormError] = useState({});
 
     const {
@@ -25,13 +25,16 @@ const FormComponent = ({setCreatedCar, updatedCar}) => {
         }
     }, [setValue, updatedCar])
 
+
     const OnSubmit = async (car) => {
-        if (updatedCar) {
-            await carsService.updadeById(updatedCar.id, updatedCar);
-        }
         try {
-            const {data} = await carsService.postCar(car);
-            setCreatedCar(data);
+            if (updatedCar) {
+                const {data} = await carsService.updadeById(updatedCar.id, car);
+                setCarAfterUpdate(data);
+            } else {
+                const {data} = await carsService.postCar(car);
+                setCreatedCar(data);
+            }
             reset();
         } catch (error) {
             setFormError(error.response.data);

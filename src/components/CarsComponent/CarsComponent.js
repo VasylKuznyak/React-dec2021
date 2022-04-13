@@ -4,13 +4,14 @@ import {carsService} from "../../services";
 import {CarComponent} from "../CarComponent/CarComponent";
 import style from './Cars.module.css';
 
-const CarsComponent = ({createdCar, setUpdatedCar}) => {
+
+const CarsComponent = ({createdCar, setUpdatedCar, carAfterUpdate}) => {
     const [allCars, setAllCars] = useState([]);
     const [carsAfterDelete, setCarsAfterDelete] = useState(null);
 
     useEffect(() => {
         carsService.getAll().then(({data}) => setAllCars(data));
-    }, [])
+    }, [carAfterUpdate])
 
     useEffect(() => {
         if (createdCar) {
@@ -27,7 +28,8 @@ const CarsComponent = ({createdCar, setUpdatedCar}) => {
     return (
         <div className={style.cars}>
             {allCars.map((car) =>
-                <CarComponent car={car} key={car.id} setCarsAfterDelete={setCarsAfterDelete} setUpdatedCar={setUpdatedCar}/>)}
+                <CarComponent car={car} key={car.id} setCarsAfterDelete={setCarsAfterDelete}
+                              setUpdatedCar={setUpdatedCar}/>)}
         </div>
     );
 };
