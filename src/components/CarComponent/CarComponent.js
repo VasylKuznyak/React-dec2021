@@ -1,7 +1,7 @@
 import style from './Car.module.css';
 import {carsService} from "../../services";
 
-const CarComponent = ({car, setCarsAfterDelete}) => {
+const CarComponent = ({car, setCarsAfterDelete, setUpdatedCar}) => {
     const {id, model, price, year} = car;
 
     const deleteCar = async () => {
@@ -16,6 +16,7 @@ const CarComponent = ({car, setCarsAfterDelete}) => {
             <h4>price: {price}</h4>
             <h4>year: {year}</h4>
             <button onClick={() => deleteCar()}>Delete</button>
+            <button onClick={() => setUpdatedCar(car)}>Update</button>
         </div>
     );
 };

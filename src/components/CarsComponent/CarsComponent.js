@@ -4,7 +4,7 @@ import {carsService} from "../../services";
 import {CarComponent} from "../CarComponent/CarComponent";
 import style from './Cars.module.css';
 
-const CarsComponent = ({createdCar}) => {
+const CarsComponent = ({createdCar, setUpdatedCar}) => {
     const [allCars, setAllCars] = useState([]);
     const [carsAfterDelete, setCarsAfterDelete] = useState(null);
 
@@ -27,7 +27,7 @@ const CarsComponent = ({createdCar}) => {
     return (
         <div className={style.cars}>
             {allCars.map((car) =>
-                <CarComponent car={car} key={car.id} setCarsAfterDelete={setCarsAfterDelete}/>)}
+                <CarComponent car={car} key={car.id} setCarsAfterDelete={setCarsAfterDelete} setUpdatedCar={setUpdatedCar}/>)}
         </div>
     );
 };
