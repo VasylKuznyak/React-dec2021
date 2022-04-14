@@ -1,0 +1,11 @@
+.details {
+    margin: 10px;
+    width: 500px;
+    color: darkslategrey;
+    text-align: center;
+}
+
+.details button {
+    margin-top: 20px;
+}
+

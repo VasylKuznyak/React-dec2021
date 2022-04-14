@@ -1,8 +1,8 @@
 import {useEffect, useState} from "react";
 import {Outlet} from "react-router-dom";
 
-import {usersService} from "../../services";
-import {Users} from "../../components";
+import {usersService} from "../../../services";
+import {Users} from "../../../components";
 import style from './Users.module.css';
 
 const UsersPage = () => {

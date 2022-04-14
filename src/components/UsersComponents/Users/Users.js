@@ -1,5 +1,5 @@
 import style from './Users.module.css';
-import {Button} from "../Button/Button";
+import {Button} from "../../Button/Button";
 
 const Users = ({user}) => {
     const {id, name} = user;
