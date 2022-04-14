@@ -3,6 +3,7 @@ import {Outlet} from "react-router-dom";
 
 import {postService} from "../../services";
 import {Post} from "../../components";
+import postStyle from './Posts.module.css';
 
 const PostsPage = () => {
     const [posts, setPosts] = useState([]);
@@ -12,9 +13,9 @@ const PostsPage = () => {
     }, [])
 
     return (
-        <div>
-            <Outlet/>
+        <div className={postStyle.posts}>
             <div>{posts.map((post) => <Post key={post.id} post={post}/>)}</div>
+            <Outlet/>
         </div>
 
     );

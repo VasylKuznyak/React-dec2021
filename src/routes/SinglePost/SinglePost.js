@@ -19,7 +19,7 @@ const SinglePost = () => {
 
     return (
         <div>
-            {post && <PostDetails key={post.key} post={post}/>}
+            {post && <PostDetails key={post.id} post={post}/>}
         </div>
     );
 };

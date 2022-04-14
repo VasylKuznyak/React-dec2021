@@ -1,7 +1,10 @@
-const User = () => {
+import {Button} from "../Button/Button";
+
+const User = ({user}) => {
+    const {id, name} = user;
     return (
         <div>
-            User
+            <Button to={id.toString()} state={user}>Details</Button> name: {name}
         </div>
     );
 };

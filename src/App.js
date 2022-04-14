@@ -1,6 +1,6 @@
 import {Routes, Route, Navigate} from "react-router-dom";
 
-import {HomePage, NotFoundPage, PostsPage, SinglePost, UsersPage} from "./routes";
+import {HomePage, NotFoundPage, PostsPage, SinglePost, SingleUser, UsersPage} from "./routes";
 import {MainLayout} from "./Layouts/MainLayout/MainLayout";
 import './Global.module.css';
 
@@ -13,7 +13,9 @@ function App() {
                 <Route path={'posts'} element={<PostsPage/>}>
                     <Route path={':id'} element={<SinglePost/>}/>
                 </Route>
-                <Route path={'users'} element={<UsersPage/>}/>
+                <Route path={'users'} element={<UsersPage/>}>
+                    <Route path={':id'} element={<SingleUser/>}/>
+                </Route>
                 <Route path={'*'} element={<NotFoundPage/>}/>
             </Route>
         </Routes>
