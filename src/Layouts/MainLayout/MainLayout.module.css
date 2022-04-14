@@ -1,19 +1,22 @@
 .nav {
-    height: 50px;
-    background-color: #696969;
+    height: 60px;
+    background-color: #345B4D;
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: 50px;
+    column-gap: 100px;
 }
 
 .nav a {
+    border: 1px solid darkgreen;
+    padding: 10px;
     text-decoration: none;
-    color: #E7E7E7;
-    font-size: 25px;
+    font-size: 20px;
+    color: #D5DDDA;
+    text-align: center;
 }
 
-.nav a[class = 'active'] {
-    color: black;
-     -webkit-text-stroke: .5px gold;
+.nav a[class='active'] {
+    font-size: 25px;
+    border: 2px solid #D5DDDA;
 }
