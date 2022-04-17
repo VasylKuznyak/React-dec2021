@@ -1,3 +1,4 @@
-export * from './CarComponent/CarComponent';
-export * from './CarsComponent/CarsComponent';
-export * from './FormComponent/FormComponent';
+export * from './Button/Button';
+export * from './PostsOfUser/PostsOfUser';
+export * from './User/User';
+export * from './UserDetails/UserInfo';

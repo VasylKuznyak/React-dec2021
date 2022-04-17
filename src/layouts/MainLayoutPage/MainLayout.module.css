@@ -1,0 +1,9 @@
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+    background-color: darkgreen;
+    height: 120px;
+    border-bottom: 1px solid orangered;
+}

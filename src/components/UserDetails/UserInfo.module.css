@@ -1,0 +1,14 @@
+.details {
+    border: 1px solid darkgreen;
+    padding: 30px;
+    text-align: center;
+}
+
+.details a {
+    text-decoration: none;
+    color: darkgreen;
+}
+
+.details a:hover {
+    text-decoration: underline;
+}
