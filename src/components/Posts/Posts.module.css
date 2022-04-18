@@ -1,0 +1,14 @@
+.posts {
+    color: darkgreen;
+    margin-top: 5px;
+}
+
+.posts a {
+    text-decoration: none;
+    color: darkgreen;
+    font-size: 18px;
+}
+
+.posts a:hover {
+    text-decoration: underline;
+}
