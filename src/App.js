@@ -1,10 +1,9 @@
-import {Counter, Counter2} from "./Components";
+import {Form} from "./Components";
 
 function App() {
     return (
         <div>
-            <Counter/>
-            <Counter2/>
+            <Form/>
         </div>
     );
 }
