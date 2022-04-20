@@ -1,9 +1,10 @@
-import {Counter} from "./Counter/Counter";
+import {Counter, Counter2} from "./Components";
 
 function App() {
     return (
         <div>
             <Counter/>
+            <Counter2/>
         </div>
     );
 }

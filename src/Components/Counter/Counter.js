@@ -1,7 +1,6 @@
 import {useReducer} from "react";
 
 const Counter = () => {
-
     const initialState = (init) => {
         return {
             count1: init,
@@ -29,11 +28,13 @@ const Counter = () => {
             case 'inc3':
                 return {...state, count3: state.count3 + 1};
             case 'dec3':
-                return {...state, count3: state.count3 - 1};
+            return {...state, count3: state.count3 - 1};
             case 'res3':
                 return {...state, count3: 0};
+
             default:
-                return {state};
+                console.error('Невідповідний тип');
+                return state;
         }
     }
 
@@ -66,3 +67,4 @@ const Counter = () => {
 };
 
 export {Counter};
+
