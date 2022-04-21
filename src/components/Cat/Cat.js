@@ -3,7 +3,7 @@ import {DELETE} from "../../reducers";
 
 const Cat = ({cat: {name, id}, dispatch}) => {
     const deleteCat = () => {
-        dispatch({type: DELETE, payload: id})
+        dispatch({type: DELETE, payload: {id: id}})
     }
 
     return (

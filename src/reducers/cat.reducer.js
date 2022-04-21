@@ -1,6 +1,6 @@
 import {useReducer} from "react";
 
-import {ADD} from "./actions";
+import {ADD, DELETE} from "./actions";
 
 const initialState = (initial) => {
     return {
@@ -17,6 +17,11 @@ const reducer = (state, action) => {
             const id = lastCat ? lastCat.id + 1 : 0;
             return {...state, cats: [...state.cats, {id, name: cat}]}
 
+        case DELETE:
+            const catId = action.payload.id;
+            const index = state.cats.findIndex((cat) => cat.id === catId);
+            state.cats.splice(index, 1);
+            return {...state, cats: [...state.cats]};
 
         default:
             console.error('Невідоповідний тип')
