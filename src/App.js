@@ -1,9 +1,9 @@
-import {Form} from "./Components";
+import {CatCreator} from "./components";
 
 function App() {
     return (
         <div>
-            <Form/>
+            <CatCreator/>
         </div>
     );
 }
