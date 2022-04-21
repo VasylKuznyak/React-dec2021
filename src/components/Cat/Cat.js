@@ -1,5 +1,5 @@
 import style from './Cat.module.css';
-import {DELETE} from "../../../reducers";
+import {DELETE} from "../../reducers";
 
 const Cat = ({cat: {name, id}, dispatch}) => {
     const deleteCat = () => {

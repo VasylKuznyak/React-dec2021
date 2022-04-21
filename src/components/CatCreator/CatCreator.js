@@ -1,7 +1,7 @@
 import {useRef} from "react";
 
 import {ADD, useAnimalReducer} from "../../reducers";
-import {Cat} from "./Cat/Cat";
+import {Cat} from "../Cat/Cat";
 
 const CatCreator = () => {
     const catRef = useRef();
