@@ -1,9 +1,11 @@
-import {CatCreator} from "./components";
+import {Posts, Users} from "./components";
 
 function App() {
+
     return (
         <div>
-            <CatCreator/>
+            <Users/>
+            <Posts/>
         </div>
     );
 }

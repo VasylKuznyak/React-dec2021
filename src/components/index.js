@@ -1,2 +1,2 @@
-export * from './Cat/Cat';
-export * from './CatCreator/CatCreator';
+export * from './Posts';
+export * from './Users';
