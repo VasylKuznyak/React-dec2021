@@ -1,11 +1,11 @@
-import {Posts, Users} from "./components";
+import {Counter, Form, Users} from "./components";
 
 function App() {
-
     return (
         <div>
+            <Counter/>
+            <Form/>
             <Users/>
-            <Posts/>
         </div>
     );
 }
