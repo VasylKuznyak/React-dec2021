@@ -1,7 +1,12 @@
+import {Cats, Dogs} from "./components";
+
+import style from './App.module.css'
+
 function App() {
     return (
-        <div>
-
+        <div className={style.header}>
+            <Cats/>
+            <Dogs/>
         </div>
     );
 }
