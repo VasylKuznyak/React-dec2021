@@ -1,5 +1,6 @@
-.header {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
+.center {
+    display: grid;
+    justify-content: space-evenly;
+    align-content: center;
+    grid-auto-flow: column;
 }

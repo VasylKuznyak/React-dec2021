@@ -4,28 +4,32 @@ const initialState = {
     dogs: [],
 }
 
-const dogsSlice = createSlice({
-    name: 'dogsSlice',
+const dogSlice = createSlice({
+    name: 'dogSlice',
     initialState,
     reducers: {
-        add: (state, action) => {
-            const {dogName} = action.payload;
+        addDog: (state, actions) => {
+            const {dog} = actions.payload;
             const [lastDog] = state.dogs.slice(-1);
             const id = lastDog ? lastDog.id + 1 : 1;
-            const newDog = {id, name: dogName}
-            state.dogs.push(newDog);
+            state.dogs.push({id, name: dog})
         },
-        deleteById: (state, action) => {
+        deleteDog: (state, action) => {
             const {id} = action.payload;
             const index = state.dogs.findIndex((value) => value.id === id);
             state.dogs.splice(index, 1);
+        },
+        updateDog: (state, actions) => {
+
         }
     }
 });
 
-const {reducer: dogReducer, actions: {add, deleteById}} = dogsSlice;
-
+const {reducer: dogReducer, actions: {addDog, deleteDog, updateDog}} = dogSlice;
 export default dogReducer;
-export const dogsActions = {
-    add, deleteById
+
+export const dogActions = {
+    addDog,
+    deleteDog,
+    updateDog
 }

@@ -1,10 +1,9 @@
 import {Cats, Dogs} from "./components";
-
-import style from './App.module.css'
+import style from './App.module.css';
 
 function App() {
     return (
-        <div className={style.header}>
+        <div className={style.center}>
             <Cats/>
             <Dogs/>
         </div>
