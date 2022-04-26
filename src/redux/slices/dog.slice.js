@@ -19,17 +19,13 @@ const dogSlice = createSlice({
             const index = state.dogs.findIndex((value) => value.id === id);
             state.dogs.splice(index, 1);
         },
-        updateDog: (state, actions) => {
-
-        }
-    }
+    },
 });
 
-const {reducer: dogReducer, actions: {addDog, deleteDog, updateDog}} = dogSlice;
+const {reducer: dogReducer, actions: {addDog, deleteDog}} = dogSlice;
 export default dogReducer;
 
 export const dogActions = {
     addDog,
     deleteDog,
-    updateDog
 }

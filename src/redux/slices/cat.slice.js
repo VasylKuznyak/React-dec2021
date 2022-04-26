@@ -18,18 +18,14 @@ const catSlice = createSlice({
             const {id} = actions.payload;
             const index = state.cats.findIndex((value) => value.id === id);
             state.cats.splice(index, 1);
-        },
-        updateCat: (state, actions) => {
-            // const {cat} = actions.payload;
-        },
+        }
     },
 });
 
-const {reducer: catReducer, actions: {addCat, deleteCat, updateCat}} = catSlice;
+const {reducer: catReducer, actions: {addCat, deleteCat}} = catSlice;
 export default catReducer;
 
 export const catActions = {
     addCat,
     deleteCat,
-    updateCat
 }

@@ -1,6 +1,16 @@
 .center {
-    display: grid;
-    justify-content: space-evenly;
-    align-content: center;
-    grid-auto-flow: column;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.block{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.block button {
+    margin: 0 2px 0 2px;
 }
