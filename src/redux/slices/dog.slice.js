@@ -2,6 +2,7 @@ import {createSlice} from "@reduxjs/toolkit";
 
 const initialState = {
     dogs: [],
+    dogForUpdate: null,
 }
 
 const dogSlice = createSlice({
@@ -19,13 +20,24 @@ const dogSlice = createSlice({
             const index = state.dogs.findIndex((value) => value.id === id);
             state.dogs.splice(index, 1);
         },
+        updateDog: (state, action) => {
+            const {dog} = action.payload;
+            state.dogForUpdate = dog;
+        },
+        updatedDog: (state, action) => {
+            const index = state.dogs.findIndex((dog) => dog.id === action.payload.id);
+            state.dogs[index].name = action.payload.dog.dogName;
+            state.dogForUpdate = null;
+        }
     },
 });
 
-const {reducer: dogReducer, actions: {addDog, deleteDog}} = dogSlice;
+const {reducer: dogReducer, actions: {addDog, deleteDog, updateDog, updatedDog}} = dogSlice;
 export default dogReducer;
 
 export const dogActions = {
     addDog,
     deleteDog,
+    updateDog,
+    updatedDog
 }

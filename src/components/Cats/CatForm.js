@@ -1,17 +1,29 @@
 import {useForm} from "react-hook-form";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {useEffect} from "react";
 
 import {catActions} from "../../redux";
 
 const CatForm = () => {
-    const {reset, register, handleSubmit} = useForm();
+    const {reset, register, handleSubmit, setValue} = useForm();
+    const {catForUpdate} = useSelector(state => state.cats);
     const dispatch = useDispatch();
 
     const onSubmit = (data) => {
-        const catName = data.catName
-        catName && dispatch(catActions.addCat({name: catName}))
-        reset();
+        if (catForUpdate) {
+            dispatch(catActions.updatedCat({id: catForUpdate.id, cat: data}));
+        } else {
+            const catName = data.catName;
+            catName && dispatch(catActions.addCat({name: catName}))
+            reset();
+        }
     }
+
+    useEffect(() => {
+        if (catForUpdate) {
+            setValue('catName', catForUpdate.name);
+        }
+    }, [setValue, catForUpdate])
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
