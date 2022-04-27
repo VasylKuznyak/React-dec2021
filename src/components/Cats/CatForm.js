@@ -28,7 +28,7 @@ const CatForm = () => {
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <input type="text" {...register('catName')} placeholder={'cat name'}/>
-            <button>SEND</button>
+            <button>{catForUpdate ? "UPDATE" : "ADD"}</button>
         </form>
     );
 };

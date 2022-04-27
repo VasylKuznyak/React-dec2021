@@ -28,7 +28,7 @@ const DogForm = () => {
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <input type="text" {...register('dogName')} placeholder={'dog name'}/>
-            <button>SEND</button>
+            <button>{dogForUpdate ? "UPDATE" : "ADD"}</button>
         </form>
     );
 };
