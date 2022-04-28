@@ -1,2 +1,1 @@
-export * from './cat.slice';
-export * from './dog.slice';
+export * from './car.slice';
