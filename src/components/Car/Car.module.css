@@ -1,0 +1,11 @@
+.carBlock {
+    background-color: lightsteelblue;
+    text-align: center;
+    width: 120px;
+    border: 1px solid darkred;
+    padding: 10px;
+}
+
+.carBlock button {
+    margin: 5px;
+}
