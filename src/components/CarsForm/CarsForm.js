@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 
 import {carActions} from "../../redux";
+import style from './CarsForm.module.css';
 
 const CarsForm = () => {
     const {reset, register, handleSubmit, setValue} = useForm();
@@ -28,12 +29,14 @@ const CarsForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <div><input type="text" {...register('model')} placeholder={'model'}/></div>
-            <div><input type="text" {...register('year')} placeholder={'year'}/></div>
-            <div><input type="text" {...register('price')} placeholder={'price'}/></div>
-            <button>SEND</button>
-        </form>
+        <div>
+            <form onSubmit={handleSubmit(onSubmit)} className={style.form}>
+                <div><input type="text" {...register('model')} placeholder={'model'}/></div>
+                <div><input type="text" {...register('year')} placeholder={'year'}/></div>
+                <div><input type="text" {...register('price')} placeholder={'price'}/></div>
+                <button>{carToUpdate ? 'UPDATE CAR' : 'CREATE CAR'}</button>
+            </form>
+        </div>
     );
 };
 

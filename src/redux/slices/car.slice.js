@@ -104,6 +104,7 @@ const carSlice = createSlice({
                     updateCar.fulfilled, (state, action) => {
                         const index = state.cars.findIndex((car) => car.id === action.payload.id);
                         state.cars[index] = {...state.cars[index], ...action.payload};
+                        state.carToUpdate = null;
                     }
                 )
                 .addCase(

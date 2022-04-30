@@ -15,8 +15,10 @@ const Cars = () => {
 
     return (
         <>
-            <div>{status && <h1>{status}</h1>}</div>
-            <div className={style.allCars}>{cars.map((car) => <Car key={car.id} car={car}/>)}</div>
+            <div>{status && <h2>{status}</h2>}</div>
+            <div className={style.allCars}>
+                {cars.map((car) => <Car key={car.id} car={car}/>)}
+            </div>
         </>
     );
 };
