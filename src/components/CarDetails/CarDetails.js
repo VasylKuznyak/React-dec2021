@@ -1,11 +1,10 @@
 import {useDispatch} from "react-redux";
+import {useNavigate} from "react-router-dom";
 
 import style from "../Car/Car.module.css";
 import {carActions} from "../../redux";
-import {useNavigate} from "react-router-dom";
 
 const CarDetails = ({car, car: {id, model, price, year}}) => {
-
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
