@@ -1,2 +1,1 @@
-export * from './post.interface';
-export * from './user.interface';
+export * from './car.interface';
