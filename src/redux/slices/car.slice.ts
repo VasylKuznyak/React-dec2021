@@ -5,10 +5,12 @@ import {carService} from "../../services";
 
 interface IState {
     cars: ICar[];
+    carToUpdate: null | ICar;
 }
 
 const initialState: IState = {
     cars: [],
+    carToUpdate: null,
 }
 
 const getAllThunk = createAsyncThunk<ICar[], void>(
@@ -38,7 +40,12 @@ const deleteByIdThunk = createAsyncThunk<{ id: string }, { id: string }>(
 const carSlice = createSlice({
         name: 'carSlice',
         initialState,
-        reducers: {},
+        reducers: {
+            setToUpdate: (state, action) => {
+                console.log(action.payload);
+                state.carToUpdate = action.payload;
+            }
+        },
         extraReducers: (builder) => {
             builder
                 .addCase(getAllThunk.fulfilled, (state, action) => {
@@ -55,9 +62,14 @@ const carSlice = createSlice({
     }
 );
 
-const {reducer: carReducer} = carSlice;
+const {reducer: carReducer, actions: {setToUpdate}} = carSlice;
 
-const carActions = {getAllThunk, createCarThunk, deleteByIdThunk};
+const carActions = {
+    getAllThunk,
+    createCarThunk,
+    deleteByIdThunk,
+    setToUpdate,
+};
 
 export {
     carReducer,
