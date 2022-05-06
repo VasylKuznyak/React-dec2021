@@ -1,0 +1,43 @@
+.carForm {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.carForm button {
+    height: 30px;
+    width: 70px;
+    margin: 34px 0 0 20px;
+    border-radius: 5px;
+    background-color: lightblue;
+    color: darkblue;
+    border: solid 1px darkblue;
+}
+
+.carForm button:hover {
+    background-color: crimson;
+    color: white;
+    border: 2px solid darkblue;
+    cursor: pointer;
+}
+
+.carForm_inputs {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carForm_inputs input {
+    color: darkblue;
+    height: 25px;
+    border: 1px solid darkblue;
+    background-color: aliceblue;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+.carForm_inputs input:focus {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 4px crimson;
+}
