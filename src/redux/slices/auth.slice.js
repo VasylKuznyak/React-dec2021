@@ -1,4 +1,5 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
+
 import {authService} from "../../services";
 
 const initialState = {
@@ -20,6 +21,9 @@ const authSlice = createSlice({
     reducers: {
         setAuth: (state) => {
             state.isAuth = true;
+        },
+        setError: (state) => {
+            state.loginError = false;
         }
     },
     extraReducers: (builder) => {
@@ -37,9 +41,9 @@ const authSlice = createSlice({
     }
 })
 
-const {reducer: authReducer, actions: {setAuth}} = authSlice;
+const {reducer: authReducer, actions: {setAuth, setError}} = authSlice;
 
-const authActions = {loginThunk, setAuth};
+const authActions = {loginThunk, setAuth, setError};
 
 export {
     authActions,
